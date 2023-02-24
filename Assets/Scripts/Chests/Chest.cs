@@ -34,6 +34,7 @@ public class Chest : MonoBehaviour
         {
             Score.CountOfDiamonds += _countOfDiamonds;
         }
+
         Destroy(this);
     }
 }

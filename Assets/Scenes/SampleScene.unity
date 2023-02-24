@@ -1621,7 +1621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1160723944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3278,20 +3278,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'How to move:
 
-    4, 6 to move left or right.
+    A, D to move left or right.
 
-    2,8 to climb up or
+    W,S to climb up or
     down.
 
 
-    Press 5 to use a weapon.
+    Press SPACE to use a weapon.
 
-
-    Press 5 over a checkpoint to reset
-    the room.
-
-
-    Press * to reset and lose a life.'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

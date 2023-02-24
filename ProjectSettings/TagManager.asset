@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Start
+  - Block
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - Background
   - StopMovement
-  - 
+  - Block
   - 
   - 
   - 
