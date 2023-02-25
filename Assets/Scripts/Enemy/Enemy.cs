@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
 
     private Animator _animator;
     private float _verticalMove;
+    private int VerticalMoveHash = Animator.StringToHash("VerticalMove");
     public float Speed;
 
     private void Start()
@@ -20,7 +21,7 @@ public class Enemy : MonoBehaviour
     {
         _verticalMove = Input.GetAxis("Vertical") * Speed;
 
-        _animator.SetFloat("VerticalMove", Mathf.Abs(_verticalMove));
+        _animator.SetFloat(VerticalMoveHash, Mathf.Abs(_verticalMove));
 
     }
 
