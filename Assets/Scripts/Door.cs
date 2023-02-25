@@ -16,10 +16,10 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        OpenDoor();
+        Open();
     }
 
-    private void OpenDoor()
+    private void Open()
     {
         if (Score.CountOfDiamonds >= _amountOfDiamondsRequired)
         {
