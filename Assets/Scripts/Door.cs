@@ -5,9 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Door : MonoBehaviour
 {
-    [SerializeField] public int _amountOfDiamondsRequired;
+    [SerializeField] private int _amountOfDiamondsRequired;
 
     private Animator _animator;
+    private int _openDoorHash = Animator.StringToHash("OpenDoor");
 
     private void Start()
     {
