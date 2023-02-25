@@ -18,14 +18,7 @@ public class HealthSystem : MonoBehaviour
     {
         for (int i = 0; i < _lives.Length; i++)
         {
-            if (i < _playerController.Health)
-            {
-                _lives[i].enabled = true;
-            }
-            else 
-            {
-                _lives[i].enabled = false;
-            }
+            _lives[i].enabled = i < _playerController.Health;
         }
     }
 
