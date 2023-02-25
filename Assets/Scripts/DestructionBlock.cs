@@ -6,6 +6,7 @@ using UnityEngine;
 public class DestructionBlock : MonoBehaviour
 {
     private Animator _animator;
+    private int _destructionHash = Animator.StringToHash("Destruction");
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class DestructionBlock : MonoBehaviour
 
     public void Destruction()
     {
-        _animator.Play("Destruction");
+        _animator.Play(_destructionHash);
         Destroy(gameObject, 1f);
     }
 }
