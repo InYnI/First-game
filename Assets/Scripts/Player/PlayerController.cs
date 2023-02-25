@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
     private float _attackRange = 0.5f;
     private float _horizontalMove;
     private float _verticalMove;
+    private int VerticalMoveHash = Animator.StringToHash("VerticalMove");
+    private int HorizontalMoveHash = Animator.StringToHash("HorizontalMove");
+    private int AttackHash = Animator.StringToHash("Attack");
+    private int DeathHash = Animator.StringToHash("Death");
     public int Health = 3;
 
     private void Start()
@@ -59,7 +63,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            _animator.SetFloat("HorizontalMove", Mathf.Abs(_horizontalMove));
+            _animator.SetFloat(HorizontalMoveHash, Mathf.Abs(_horizontalMove));
 
             if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
@@ -70,7 +74,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            _animator.SetFloat("VerticalMove", Mathf.Abs(_verticalMove));
+            _animator.SetFloat(VerticalMoveHash, Mathf.Abs(_verticalMove));
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -81,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     private void Attack()
     {
-        _animator.SetTrigger("Attack");
+        _animator.SetTrigger(AttackHash);
 
         Collider2D[] hitBlock = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _destructibleBlocks);
 
@@ -112,7 +116,7 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        _animator.Play("Death");
+        _animator.Play(DeathHash);
         Invoke("Delay", 2.5f);
         _moveSpeed = 0f;
     }
