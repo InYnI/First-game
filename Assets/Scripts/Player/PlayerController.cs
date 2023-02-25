@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     private float _horizontalMove;
     private float _verticalMove;
     public int Health = 3;
-    public bool GodMode = false;
 
     private void Start()
     {
