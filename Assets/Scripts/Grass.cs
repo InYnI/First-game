@@ -6,6 +6,7 @@ using UnityEngine;
 public class Grass : MonoBehaviour
 {
     private Animator _animator;
+    private int _grassFallHash = Animator.StringToHash("GrassFall");
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class Grass : MonoBehaviour
     {
         if (collision.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
-            _animator.Play("GrassFall");
+            _animator.Play(_grassFallHash);
             Destroy(gameObject, 1f);
         }
     }
