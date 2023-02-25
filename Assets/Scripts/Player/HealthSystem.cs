@@ -29,15 +29,9 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    private void OffGodMode()
-    {
-        _playerController.GodMode = false;
-    }
-
     public void ApplyDamage(int damage)
     {
         _playerController.Health -= damage;
-        _playerController.GodMode = true;
 
         if (_playerController.Health <= 0)
             _playerController.Death();
