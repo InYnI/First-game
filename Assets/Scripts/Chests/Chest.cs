@@ -9,6 +9,7 @@ public class Chest : MonoBehaviour
     [SerializeField] private int _countOfDiamonds;
 
     private Animator _animator;
+    private int _openHash = Animator.StringToHash("Open");
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class Chest : MonoBehaviour
     {
         if (collision.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
-            _animator.Play("Open");
+            _animator.Play(_openHash);
             CollectDiamond(_diamond);
         }
     }
