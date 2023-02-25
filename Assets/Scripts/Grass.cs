@@ -14,7 +14,7 @@ public class Grass : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<Player>(out Player player))
+        if (collision.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
             _animator.Play("GrassFall");
             Destroy(gameObject, 1f);
