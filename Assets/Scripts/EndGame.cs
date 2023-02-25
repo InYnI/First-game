@@ -5,7 +5,7 @@ public class EndGame : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<Player>(out Player player))
+        if (collision.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
             SceneManager.LoadScene("SampleScene");
         }
