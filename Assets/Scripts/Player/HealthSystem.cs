@@ -7,26 +7,26 @@ public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private Image[] _lives;
 
-    private PlayerController _playerController;
+    private PlayerActions _playerActions;
 
     private void Start()
     {
-        _playerController = GetComponent<PlayerController>();
+        _playerActions = GetComponent<PlayerActions>();
     }
 
     private void Update()
     {
         for (int i = 0; i < _lives.Length; i++)
         {
-            _lives[i].enabled = i < _playerController.Health;
+            _lives[i].enabled = i < _playerActions.Health;
         }
     }
 
     public void ApplyDamage(int damage)
     {
-        _playerController.Health -= damage;
+        _playerActions.Health -= damage;
 
-        if (_playerController.Health <= 0)
-            _playerController.Death();
+        if (_playerActions.Health <= 0)
+            _playerActions.Death();
     }
 }
